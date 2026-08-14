@@ -65,7 +65,7 @@ export const getCurrentUser = async () => {
     throw new Error("No token found");
   }
 
-  const response = await fetch(`${import.meta.env.VITE_API_URL}/me`, {
+  const response = await fetch(`${API_URL}/me`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
