@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.resume-heading {
+  border-bottom: 2px solid #1f2937;
+  padding-bottom: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
