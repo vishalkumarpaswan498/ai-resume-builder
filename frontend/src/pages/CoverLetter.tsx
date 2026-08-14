@@ -48,7 +48,7 @@ function CoverLetter() {
 
       try {
         const response = await fetch(
-          "http://localhost:5000/api/resumes",
+          `${import.meta.env.VITE_API_URL}/api/resumes`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -125,7 +125,7 @@ function CoverLetter() {
       setCoverLetter("");
 
       const response = await fetch(
-        "http://localhost:5000/api/ai/generate-cover-letter",
+        `${import.meta.env.VITE_API_URL}/api/ai/generate-cover-letter`,
         {
           method: "POST",
           headers: {

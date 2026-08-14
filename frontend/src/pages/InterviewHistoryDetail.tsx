@@ -63,7 +63,7 @@ function InterviewHistoryDetail() {
 
       try {
         const response = await fetch(
-          `http://localhost:5000/api/interviews/${id}`,
+          `${import.meta.env.VITE_API_URL}/api/interviews/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

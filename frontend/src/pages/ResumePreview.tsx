@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams, useSearchParams, } from "react-router-dom";
 import html2pdf from "html2pdf.js";
 
-const API_URL = "http://localhost:5000/api/resumes";
+const API_URL = `${import.meta.env.VITE_API_URL}/api/resumes`;
 
 type Resume = {
   _id: string;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const API_URL = "http://localhost:5000/api/resumes";
+const API_URL = `${import.meta.env.VITE_API_URL}/api/resumes`;
 
 type Education = {
   degree: string;
@@ -497,7 +497,7 @@ const handleGenerateAI = async () => {
     setSuccess("");
 
     const response = await fetch(
-      "http://localhost:5000/api/ai/generate-resume",
+      `${import.meta.env.VITE_API_URL}/api/ai/generate-resume`,
       {
         method: "POST",
         headers: {

@@ -71,8 +71,8 @@ function ATSChecker() {
       }
 
       try {
-        const response = await fetch(
-          "http://localhost:5000/api/resumes",
+       const response = await fetch(
+  `${import.meta.env.VITE_API_URL}/api/resumes`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -175,7 +175,7 @@ function ATSChecker() {
         analyzeMode === "saved"
       ) {
         response = await fetch(
-          `http://localhost:5000/api/ats/analyze-saved/${selectedResumeId}`,
+          `${import.meta.env.VITE_API_URL}/api/ats/analyze-saved/${selectedResumeId}`,
           {
             method: "POST",
 
@@ -219,7 +219,7 @@ function ATSChecker() {
         );
 
         response = await fetch(
-          "http://localhost:5000/api/ats/analyze",
+          `${import.meta.env.VITE_API_URL}/api/ats/analyze`,
           {
             method: "POST",
 
